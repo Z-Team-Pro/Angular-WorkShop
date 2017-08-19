@@ -2,22 +2,23 @@ import { Component } from '@angular/core';
 import { Routes, RouterModule ,Router } from '@angular/router';
 
 @Component({
-    moduleId: module.id,
     selector: 'login',
     templateUrl: 'login.component.html',
     styleUrls: ['login.component.scss']
 })
 export class LoginComponent {
-
     username:string;
     password:string;
     success:boolean =true;
-    
+    Error:boolean;
     constructor( private route: Router){
-    
+
     
     }
     
+
+
+
     
     //get user 
     
