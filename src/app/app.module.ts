@@ -1,3 +1,5 @@
+import { LoadPostsService } from './Services/LoadPosts.service';
+import { SignUpService } from './Services/Signup.service';
 import { ControlService } from './Services/control.service';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
@@ -24,7 +26,7 @@ import { AppComponent } from './app.component';
     RouterModule.forRoot(rootRouterConfig)
 
   ],
-  providers: [ ControlService ],
+  providers: [ ControlService ,SignUpService ,LoadPostsService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

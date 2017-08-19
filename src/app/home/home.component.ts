@@ -1,3 +1,4 @@
+import { LoadPostsService } from './../Services/LoadPosts.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,5 +8,15 @@ import { Component } from '@angular/core';
     styleUrls: ['home.component.scss']
 })
 export class HomeComponent {
+List:any;
+constructor( private posts : LoadPostsService){
+
+
+}
+ 
+ngOnInit(){
+this.List=this.posts.GetPosts();
+}
+
 
 }

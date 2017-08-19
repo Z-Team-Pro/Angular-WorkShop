@@ -10,7 +10,7 @@ export class ControlService {
      canActivate() {
         var jwtHelper: JwtHelper = new JwtHelper();
         
-         if (localStorage.getItem('currentUser')) {
+         if (localStorage.getItem('User')) {
              // logged in so return true
              /*
              var chek=jwtHelper.isTokenExpired(token);
@@ -20,6 +20,7 @@ export class ControlService {
 
              return true;
              */
+            return true
          }
   
          // not logged in so redirect to login page
